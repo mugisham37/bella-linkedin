@@ -1,0 +1,853 @@
+body {
+    margin: 0;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: black;
+    color: #e1e1e2;
+}
+
+.navbartop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: #1d2226;
+    width: 100%;
+    min-width: 1020px;
+    height: 60px;
+    z-index: 3;
+}
+
+.logoandsearch {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 330px;
+}
+
+.navbartop svg {
+    fill: #ffff;
+    width: 33px;
+}
+
+.inputsearch {
+    position: relative;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.inputsearch input {
+    padding-left: 27px;
+    border-radius: 3px;
+    height: 27px;
+    padding-top: 4.3px;
+    border: none;
+    color: white;
+    width: 250px;
+    background-color: #38434f;
+}
+
+.inputsearch ::placeholder {
+    color: #abb0b4;
+}
+
+.inputsearch svg {
+    position: absolute;
+    left: 7px;
+    top: 9.01px;
+    fill: #abb0b4;
+    width: 15px;
+    height: 15px;
+}
+
+.nv p {
+    margin: 0;
+    font-size: 11px;
+    color: rgb(182, 179, 179);
+}
+
+.navigations {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 580px;
+}
+
+.nv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.selected {
+    position: absolute;
+    height: 2px;
+    width: 60px;
+    background-color: rgb(206, 202, 202);
+    border-radius: 12px;
+    bottom: -1px;
+}
+
+.selected2 {
+    position: absolute;
+    top: 10px;
+    right: 22px;
+    background-color: red;
+    padding: 2px;
+    height: 8px;
+    width: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+}
+
+.navbartop .navigations .nv .selected2 p {
+    color: white;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.nv svg {
+    fill: rgb(182, 179, 179);
+}
+
+#choosen svg {
+    fill: white;
+}
+
+#choosen p {
+    color: white;
+    font-weight: bold;
+}
+
+.nvprofile img {
+    width: 30px;
+    border-radius: 9999px;
+}
+
+.nv select {
+    color: rgb(182, 179, 179);
+    background-color: rgb(45, 47, 58);
+    font-size: 9px;
+    border: none;
+}
+
+.nv.nvprofile {
+    border-right: 1px solid rgb(78, 77, 77);
+    padding-right: 10px;
+}
+
+.navigations a {
+    font-size: 12px;
+    color: rgb(224, 192, 6);
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    margin-top: 70px;
+    display: grid;
+    grid-template-areas: "profile post follow" "profile line follow" "profile content1 follow" "anaysis content1 fixtotop" "analysis content1 fixtotop" "recent content1 fixtotop" "recent content2 ." ". content2 ." ". content3 ." ". bottom .";
+    row-gap: 6px;
+    column-gap: 13px;
+    grid-template-columns: 210px 600px 240px;
+    grid-template-rows: 110px;
+}
+
+.aboutprofile {
+    grid-area: profile;
+    width: 210px;
+    background-color: rgb(29 34 38);
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.bg {
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    width: 100%;
+    height: 60px;
+    object-fit: cover;
+}
+
+.pr {
+    position: absolute;
+    width: 60px;
+    border-radius: 999px;
+    left: 76px;
+    top: 30px;
+}
+
+.name {
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+    border-bottom: 0.1rem solid gray;
+}
+
+.big {
+    font-size: large;
+    font-weight: bold;
+    margin: 0;
+}
+
+.summary {
+    font-size: 12px;
+    color: rgb(156, 154, 154);
+    font-weight: 500;
+    margin: 0;
+    padding: 9px;
+    line-height: 17px;
+}
+
+.viewed {
+    font-size: 12px;
+    padding-left: 12px;
+    padding-top: 12px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.viewed p {
+    margin: 0;
+    padding-top: 4px;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.one {
+    color: rgb(156, 154, 154);
+}
+
+.two {
+    color: #1d9bf0;
+    text-align: right;
+}
+
+.thecolor {
+    color: rgb(156, 154, 154);
+    margin: 0;
+}
+
+.access svg {
+    width: 20px;
+}
+
+.access {
+    padding-left: 10px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    font-size: 13px;
+    border-top: 0.1rem solid gray;
+    border-bottom: 0.1rem solid gray;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+}
+
+.link a {
+    color: white;
+}
+
+.my svg {
+    width: 20px;
+    fill: rgb(156, 154, 154);
+}
+
+.my p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.my {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    width: 94px;
+    justify-content: space-between;
+}
+
+.analytics {
+    grid-area: analysis;
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    grid-row-start: 4;
+    box-sizing: border-box;
+    background-color: rgb(29 34 38);
+    border-radius: 12px;
+}
+
+.analytics svg {
+    width: 40px;
+    padding: 12px;
+    fill: rgb(60, 145, 255);
+}
+
+.visitors {
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.three {
+    color: rgb(156, 154, 154);
+    font-weight: bold;
+}
+
+.four {
+    color: #1d9bf0;
+}
+
+.see {
+    font-size: 13px;
+    margin: 0;
+    text-align: center;
+    padding: 8px;
+    border-top: solid 0.1rem gray;
+}
+
+.see p {
+    margin: 0;
+}
+
+.page {
+    padding: 0 12px;
+}
+
+.recent {
+    grid-area: recent;
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    box-sizing: border-box;
+    background-color: rgb(29 34 38);
+    border-radius: 12px;
+    color: rgb(150, 150, 150);
+    padding: 0 0 12px 12px;
+    height: 310px;
+    position: sticky;
+    top: 61px;
+}
+
+.people p {
+    margin: 0;
+    padding-left: 3px;
+}
+
+.recent .people {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    font-size: 14px;
+}
+
+.recents {
+    display: flex;
+    flex-direction: column;
+}
+
+.othercolor {
+    color: #1d9bf0;
+    font-weight: bold;
+}
+
+.postprofile {
+    grid-area: post;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    padding: 12px;
+    border-radius: 12px;
+    flex-direction: column;
+    background-color: rgb(29 34 38);
+}
+
+.profandinput {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profandinput img {
+    width: 50px;
+    border-radius: 9999px;
+}
+
+.profandinput input {
+    width: 86%;
+    height: 40px;
+    background-color: rgb(29 34 38);
+    border: 0.1rem solid rgb(77, 80, 84);
+    border-radius: 26px;
+    color: white;
+    padding-left: 20px;
+}
+
+.profandinput ::placeholder {
+    color: #e9e9ea;
+    font-weight: 600;
+}
+
+.profandinput input:focus {
+    outline: none;
+}
+
+.choose svg {
+    width: 26px;
+}
+
+.choose p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.choose {
+    display: flex;
+    margin-top: 12px;
+    justify-content: space-around;
+}
+
+.choose1,
+.choose2,
+.choose3,
+.choose4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.choose1,
+.choose2 {
+    width: 70px;
+}
+
+.choose3 {
+    width: 55px;
+}
+
+.choose4 {
+    width: 106px;
+}
+
+.choose1 svg {
+    fill: #1d9bf0;
+}
+
+.choose2 svg {
+    fill: #80c15e;
+}
+
+.choose3 svg {
+    fill: #c79ef7;
+}
+
+.choose4 svg {
+    fill: #f5987e;
+}
+
+.theline {
+    grid-area: line;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    background-color: #151515;
+    height: 1px;
+    width: 84%;
+}
+
+.sort {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 16%;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+}
+
+.top p {
+    margin: 0;
+}
+
+.top svg {
+    width: 20px;
+}
+
+.feed {
+    grid-area: content1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(29 34 38);
+    border-radius: 12px;
+}
+
+.feed p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.fedpstpro {
+    display: flex;
+    width: 46%;
+    justify-content: space-between;
+    padding: 0 0 9px 0;
+}
+
+.onlyname {
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.pro img {
+    width: 50px;
+}
+
+.feeddescription p {
+    display: inline;
+}
+
+.feedhead {
+    padding: 15px 15px;
+}
+
+.feedcontent img {
+    width: 100%;
+}
+
+.reactions {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+}
+
+.react {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.react p {
+    padding-left: 5px;
+}
+
+.reacts {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.feedbottom {
+    padding: 12px;
+}
+
+.feedbottom svg {
+    fill: #a4a5a7;
+}
+
+.feed2 {
+    grid-area: content2;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(29 34 38);
+    border-radius: 12px;
+}
+
+.feed2 p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.feed2 .fedpstpro {
+    width: 31%;
+}
+
+.feed2 .feedcontent {
+    display: grid;
+    grid-template-areas: "a b" "c d";
+    row-gap: 3px;
+    column-gap: 3px;
+}
+
+.feed3 {
+    grid-area: content3;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(29 34 38);
+    border-radius: 12px;
+}
+
+.feed3 p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.feed3 .fedpstpro {
+    width: 30%;
+}
+
+.bottom {
+    grid-area: bottom;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bottom ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    color: rgb(156, 154, 154);
+    display: grid;
+    grid-template-areas: "about accessibility help" "privacy privacy ad" "adver busin busin" "get get more";
+    column-gap: 10px;
+    row-gap: 9px;
+}
+
+.about {
+    grid-area: about;
+}
+
+.accessibili {
+    grid-area: accessibility;
+}
+
+.help {
+    grid-area: help;
+}
+
+.privacys {
+    grid-area: privacy;
+    display: flex;
+    align-items: center;
+}
+
+.privacys svg {
+    width: 14px;
+}
+
+.ad {
+    grid-area: ad;
+}
+
+.adver {
+    grid-area: adver;
+}
+
+.bisin {
+    grid-area: busin;
+    display: flex;
+    align-items: center;
+}
+
+.bisin svg {
+    width: 14px;
+}
+
+.get {
+    grid-area: get;
+}
+
+.more {
+    grid-area: more;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+}
+
+.copyright svg {
+    width: 70px;
+}
+
+.follow {
+    grid-area: follow;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(29 34 38);
+    border-radius: 12px;
+    padding: 0 10px;
+    justify-content: space-around;
+}
+
+.followhead {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.followhead svg {
+    width: 20px;
+}
+
+.followbody img {
+    width: 50px;
+    border-radius: 9999px;
+}
+
+.followbody p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6px;
+}
+
+.followbtn {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    border: #76797b solid 1px;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.followbtn p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.followfooter p {
+    margin: 0;
+    padding: 12px;
+}
+
+.hiring img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.links .copyright p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.fixtotop {
+    grid-area: fixtotop;
+    position: sticky;
+    top: 65px;
+}
+
+@media all and (max-width: 500px) {
+    .aboutprofile,
+    .postprofile,
+    .feed,
+    .feed2,
+    .feed3,
+    .analytics,
+    .follow,
+    .recent,
+    .fixtotop {
+        grid-column-end: 2;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .choose4 {
+        width: fit-content;
+    }
+    .feed {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+    }
+    .navbartop {
+        display: none;
+    }
+    .theline {
+        display: none;
+    }
+    .choose p {
+        display: none;
+    }
+    .name {
+        border-bottom: none;
+    }
+    .pr {
+        left: 43%;
+    }
+    .fixtotop,
+    .recent {
+        position: static;
+    }
+    .username {
+        margin-left: 10px;
+    }
+    .viewed,
+    .my,
+    .access,
+    .bottom.feeder {
+        display: none;
+    }
+    .reacts {
+        width: 60%;
+    }
+    .fedpstpro {
+        width: inherit;
+        justify-content: flex-start;
+        padding: 0;
+    }
+    .feed2 .fedpstpro,
+    .feed3 .fedpstpro {
+        width: inherit;
+    }
+    .postprofile {
+        grid-row: inherit;
+    }
+    .analytics {
+        grid-row-start: inherit;
+    }
+    main {
+        width: 100%;
+        margin-top: 0;
+        grid-template-areas: "profile" "post" "conten1" "content2" "content3" "analysis" "follow" "recent" "fixtotop" "bottom";
+        row-gap: 7px;
+        column-gap: 0;
+        grid-template-columns: none;
+        grid-template-rows: none;
+        padding: 6px;
+        box-sizing: border-box;
+    }
+}
